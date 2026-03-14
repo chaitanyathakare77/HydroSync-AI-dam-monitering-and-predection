@@ -1,0 +1,95 @@
+type,name,latitude,longitude,state,district,river,capacity_mw,height_m,reservoir_area_km2,population,nearby_dam,dam_type,status,description
+dam,Tehri Dam,30.376251,78.480400,Uttarakhand,Tehri Garhwal,Bhagirathi River,2400,260.5,52,,,"Rock and Earth-fill Embankment",Operational,"Tallest dam in India, 13th tallest in the world"
+village,New Tehri,30.376251,78.435379,Uttarakhand,Tehri Garhwal,,,,,24014,Tehri Dam,,,Administrative headquarters built after old Tehri was submerged
+village,Pratapnagar,30.392000,78.465000,Uttarakhand,Tehri Garhwal,,,,,5000,Tehri Dam,,,Nearest settlement to Tehri Dam
+village,Chamba,30.332800,78.380700,Uttarakhand,Tehri Garhwal,,,,,12000,Tehri Dam,,,Hill station near Tehri Dam
+village,Ghansali,30.427200,78.656100,Uttarakhand,Tehri Garhwal,,,,,8000,Tehri Dam,,,Village in Tehri district
+village,Devprayag,30.146100,78.599200,Uttarakhand,Tehri Garhwal,,,,,6500,Tehri Dam,,,Confluence town downstream of dam
+dam,Bhakra Dam,31.410400,76.437800,Himachal Pradesh,Bilaspur,Sutlej River,1325,226,168.35,,,"Concrete Gravity",Operational,"Second tallest dam in India, Asia's tallest straight gravity dam"
+village,Nangal,31.389700,76.370800,Punjab,Rupnagar,,,,,48000,Bhakra Dam,,,Town built for dam workers and displaced people
+village,Naya Nangal,31.391700,76.382500,Punjab,Rupnagar,,,,,35000,Bhakra Dam,,,Planned township for NFL factory
+village,Bilaspur,31.339700,76.755500,Himachal Pradesh,Bilaspur,,,,,15000,Bhakra Dam,,,District headquarters near dam
+village,Kiratpur,31.196200,76.568500,Punjab,Rupnagar,,,,,12000,Bhakra Dam,,,Town downstream of dam
+village,Anandpur Sahib,31.239100,76.500700,Punjab,Rupnagar,,,,,16282,Bhakra Dam,,,Historic Sikh city near dam
+dam,Sardar Sarovar Dam,21.833300,73.750000,Gujarat,Narmada,Narmada River,1450,163,375,,,"Concrete Gravity",Operational,"Part of Narmada Valley Project, second largest concrete dam"
+village,Kevadia,21.894700,73.719700,Gujarat,Narmada,,,,,3500,Sardar Sarovar Dam,,,Village near dam, site of Statue of Unity
+village,Rajpipla,21.867500,73.500800,Gujarat,Narmada,,,,,35000,Sardar Sarovar Dam,,,Town near reservoir
+village,Garudeshwar,21.849700,73.615800,Gujarat,Narmada,,,,,8000,Sardar Sarovar Dam,,,Village downstream of dam
+village,Tilakwada,21.937800,73.528300,Gujarat,Narmada,,,,,15000,Sardar Sarovar Dam,,,Tehsil town near dam
+village,Sagbara,21.778900,73.742200,Gujarat,Narmada,,,,,12000,Sardar Sarovar Dam,,,Village in affected area
+dam,Hirakud Dam,21.530000,83.870000,Odisha,Sambalpur,Mahanadi River,347.5,60.96,743,,,"Composite (Earth, Concrete, Masonry)",Operational,"Longest earthen dam in the world (25.8 km total length)"
+village,Burla,21.508900,83.872000,Odisha,Sambalpur,,,,,35000,Hirakud Dam,,,Major town near dam
+village,Sambalpur,21.465300,83.970800,Odisha,Sambalpur,,,,,335761,Hirakud Dam,,,District headquarters and major city
+village,Hirakud,21.521200,83.865400,Odisha,Sambalpur,,,,,25000,Hirakud Dam,,,Town named after the dam
+village,Chipilima,21.449100,83.863600,Odisha,Sambalpur,,,,,8000,Hirakud Dam,,,Village near dam reservoir
+village,Lakhanpur,21.545600,83.905200,Odisha,Sambalpur,,,,,6000,Hirakud Dam,,,Village in dam vicinity
+dam,Nagarjuna Sagar Dam,16.575300,79.311900,Telangana,Nalgonda,Krishna River,960,124,285,,,"Masonry",Operational,"World's largest masonry dam, creates one of India's largest reservoirs"
+village,Vijayapuri,16.565000,79.295000,Telangana,Nalgonda,,,,,8000,Nagarjuna Sagar Dam,,,Resettlement colony for displaced people
+village,Macherla,16.478700,79.436800,Andhra Pradesh,Palnadu,,,,,40000,Nagarjuna Sagar Dam,,,Town near dam in Andhra Pradesh
+village,Miryalaguda,16.875500,79.566700,Telangana,Nalgonda,,,,,52654,Nagarjuna Sagar Dam,,,Major town upstream
+village,Haliya,16.553800,79.328900,Telangana,Nalgonda,,,,,12000,Nagarjuna Sagar Dam,,,Village near dam
+village,Vadapally,16.588700,79.284200,Telangana,Nalgonda,,,,,7000,Nagarjuna Sagar Dam,,,Village in affected area
+dam,Krishna Raja Sagara Dam,12.424400,76.570500,Karnataka,Mandya,Cauvery River,49.5,45,130,,,"Gravity Dam",Operational,"Iconic dam with beautiful gardens, supplies water to Mysore and Bangalore"
+village,Srirangapatna,12.420000,76.695600,Karnataka,Mandya,,,,,25061,Krishna Raja Sagara Dam,,,Historic town near dam
+village,Mandya,12.522400,76.895500,Karnataka,Mandya,,,,,137358,Krishna Raja Sagara Dam,,,District headquarters
+village,KRS Layout,12.417800,76.562300,Karnataka,Mandya,,,,,5000,Krishna Raja Sagara Dam,,,Residential area near dam
+village,Brindavan Gardens,12.421700,76.571800,Karnataka,Mandya,,,,,0,Krishna Raja Sagara Dam,,,Famous terraced garden at dam
+village,Paschimavahini,12.398900,76.548200,Karnataka,Mandya,,,,,8000,Krishna Raja Sagara Dam,,,Village downstream
+dam,Indira Sagar Dam,22.230600,76.469200,Madhya Pradesh,Khandwa,Narmada River,1000,92,913,,,"Gravity Dam",Operational,"Largest reservoir in India by volume (12.22 billion cubic meters)"
+village,Punasa,22.238900,76.392800,Madhya Pradesh,Khandwa,,,,,12000,Indira Sagar Dam,,,Village near dam
+village,Khandwa,21.826700,76.350700,Madhya Pradesh,Khandwa,,,,,145133,Indira Sagar Dam,,,District headquarters
+village,Harsud,22.100000,76.733300,Madhya Pradesh,Khandwa,,,,,0,Indira Sagar Dam,,,Submerged town (relocated to New Harsud)
+village,Omkareshwar,22.240200,76.141700,Madhya Pradesh,Khandwa,,,,,15000,Indira Sagar Dam,,,Pilgrimage town downstream
+village,Nepanagar,21.455600,76.379400,Madhya Pradesh,Burhanpur,,,,,28000,Indira Sagar Dam,,,Industrial town in region
+dam,Koyna Dam,17.391700,73.760600,Maharashtra,Satara,Koyna River,1920,103,891.78,,,"Rubble Concrete Dam",Operational,"One of India's largest hydroelectric projects"
+village,Helwak,17.378900,73.748200,Maharashtra,Satara,,,,,3500,Koyna Dam,,,Village near dam
+village,Patan,17.339200,73.860400,Maharashtra,Satara,,,,,8500,Koyna Dam,,,Tehsil town near reservoir
+village,Chiplun,17.533300,73.516700,Maharashtra,Ratnagiri,,,,,69015,Koyna Dam,,,Major town downstream
+village,Agashivnagar,17.402200,73.772800,Maharashtra,Satara,,,,,5000,Koyna Dam,,,Village in dam area
+village,Alore,17.365600,73.798900,Maharashtra,Satara,,,,,4500,Koyna Dam,,,Village near reservoir
+dam,Mettur Dam,11.787800,77.800000,Tamil Nadu,Salem,Cauvery River,200,65,93.47,,,"Concrete Gravity",Operational,"Largest dam in Tamil Nadu, built in 1934"
+village,Mettur,11.788900,77.801200,Tamil Nadu,Salem,,,,,70860,Mettur Dam,,,Town built around dam
+village,Salem,11.651400,78.146000,Tamil Nadu,Salem,,,,,826267,Mettur Dam,,,Major city downstream
+village,Kolathur,11.825600,77.783400,Tamil Nadu,Salem,,,,,12000,Mettur Dam,,,Village near dam
+village,Mecheri,11.812200,77.756700,Tamil Nadu,Salem,,,,,18000,Mettur Dam,,,Town near reservoir
+village,Edappadi,11.663900,77.992200,Tamil Nadu,Salem,,,,,25000,Mettur Dam,,,Industrial town in region
+dam,Rihand Dam,24.200000,83.053300,Uttar Pradesh,Sonbhadra,Rihand River,300,91.44,466,,,"Concrete Gravity",Operational,"Creates Govind Ballabh Pant Sagar reservoir"
+village,Pipri,24.218900,83.048900,Uttar Pradesh,Sonbhadra,,,,,8000,Rihand Dam,,,Village near dam
+village,Obra,24.418900,82.988900,Uttar Pradesh,Sonbhadra,,,,,15000,Rihand Dam,,,Industrial town with thermal power plant
+village,Robertsganj,24.689700,83.068300,Uttar Pradesh,Sonbhadra,,,,,35000,Rihand Dam,,,District headquarters
+village,Churk,24.453300,82.983300,Uttar Pradesh,Sonbhadra,,,,,12000,Rihand Dam,,,Industrial area near reservoir
+village,Shakti Nagar,24.423900,82.975600,Uttar Pradesh,Sonbhadra,,,,,18000,Rihand Dam,,,Township near thermal plant
+dam,Tungabhadra Dam,15.022800,76.331100,Karnataka,Koppal,Tungabhadra River,72,49.39,378.3,,,"Composite Dam",Operational,"Joint project of Karnataka and Andhra Pradesh"
+village,Munirabad,15.033300,76.333900,Karnataka,Koppal,,,,,15000,Tungabhadra Dam,,,Village at dam site
+village,Hospet,15.268900,76.387800,Karnataka,Ballari,,,,,206167,Tungabhadra Dam,,,Major city near dam
+village,Kampli,15.406700,76.600600,Karnataka,Ballari,,,,,23000,Tungabhadra Dam,,,Historic town in region
+village,Siruguppa,15.625600,77.055000,Karnataka,Ballari,,,,,35000,Tungabhadra Dam,,,Town in irrigated area
+village,Mallapuram,15.007800,76.354200,Karnataka,Koppal,,,,,8000,Tungabhadra Dam,,,Village near dam
+dam,Idukki Dam,9.838900,77.098600,Kerala,Idukki,Periyar River,780,169,60,,,"Arch Dam (Double Curvature)",Operational,"One of the highest arch dams in Asia"
+village,Idukki,9.866700,77.000000,Kerala,Idukki,,,,,11661,Idukki Dam,,,District headquarters town
+village,Thodupuzha,9.896700,76.717800,Kerala,Idukki,,,,,52045,Idukki Dam,,,Major town in district
+village,Painavu,9.797800,77.077800,Kerala,Idukki,,,,,8000,Idukki Dam,,,Village near dam
+village,Cheruthoni,9.845600,77.086700,Kerala,Idukki,,,,,6500,Idukki Dam,,,Village at dam site
+village,Kulamavu,9.819400,77.123900,Kerala,Idukki,,,,,12000,Idukki Dam,,,Village near reservoir
+dam,Ukai Dam,21.256700,73.568900,Gujarat,Tapi,Tapi River,300,80,62.23,,,"Masonry and Earth-fill",Operational,"Largest reservoir in Gujarat"
+village,Ukai,21.260000,73.571100,Gujarat,Tapi,,,,,8000,Ukai Dam,,,Village at dam site
+village,Songadh,21.169200,73.563900,Gujarat,Tapi,,,,,25000,Ukai Dam,,,Town near reservoir
+village,Vyara,21.110600,73.399400,Gujarat,Tapi,,,,,46762,Ukai Dam,,,Major town in district
+village,Valod,21.205600,73.500800,Gujarat,Tapi,,,,,15000,Ukai Dam,,,Town near dam
+village,Kakrapar,21.231700,73.261700,Gujarat,Tapi,,,,,12000,Ukai Dam,,,Village downstream with atomic power station
+dam,Srisailam Dam,16.077800,78.900000,Andhra Pradesh,Kurnool,Krishna River,1670,143,616,,,"Masonry Dam",Operational,"Second largest capacity working hydroelectric station in India"
+village,Srisailam,16.073900,78.868300,Andhra Pradesh,Kurnool,,,,,8000,Srisailam Dam,,,Temple town and pilgrimage center
+village,Atmakur,16.022200,78.586700,Andhra Pradesh,Kurnool,,,,,12000,Srisailam Dam,,,Town near reservoir
+village,Dornala,16.145600,78.823900,Andhra Pradesh,Kurnool,,,,,6000,Srisailam Dam,,,Village in dam area
+village,Mannanur,16.098900,78.845600,Andhra Pradesh,Kurnool,,,,,5500,Srisailam Dam,,,Village near dam
+village,Sunnipenta,15.947800,78.957800,Andhra Pradesh,Kurnool,,,,,7500,Srisailam Dam,,,Village in affected area
+river,Ganges River,25.317600,83.010300,Uttar Pradesh,Varanasi,Ganges River,,,2525 km total length,,,,,One of India's holiest rivers
+river,Yamuna River,25.435800,81.846300,Uttar Pradesh,Prayagraj,Yamuna River,,,1376 km total length,,,,,Major tributary of Ganges
+river,Narmada River,22.591000,74.986600,Madhya Pradesh,Hoshangabad,Narmada River,,,1312 km total length,,,,,Central India's largest westward flowing river
+river,Krishna River,16.506200,80.648000,Andhra Pradesh,Vijayawada,Krishna River,,,1400 km total length,,,,,Major river of South India
+river,Godavari River,16.727800,81.775600,Andhra Pradesh,Rajahmundry,Godavari River,,,1465 km total length,,,,,Second longest river in India
+river,Cauvery River,11.937800,79.832200,Tamil Nadu,Thanjavur,Cauvery River,,,800 km total length,,,,,Sacred river of South India
+river,Brahmaputra River,26.185600,91.746700,Assam,Guwahati,Brahmaputra River,,,2900 km total length,,,,,One of the major rivers of Asia
+river,Sutlej River,31.239400,76.502800,Punjab,Rupnagar,Sutlej River,,,1450 km total length,,,,,Longest of the five rivers of Punjab
+river,Tapti River,21.170000,72.833300,Gujarat,Surat,Tapti River,,,724 km total length,,,,,Major river in central India
+river,Mahanadi River,20.489400,86.043900,Odisha,Cuttack,Mahanadi River,,,858 km total length,,,,,Major river of eastern India

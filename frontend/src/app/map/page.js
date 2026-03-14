@@ -2,20 +2,28 @@
 
 import dynamic from "next/dynamic"
 import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react"
 
 const DamMap = dynamic(() => import("./DamMap"), {
   ssr: false,
 })
 
 export default function MapPage() {
+
   const router = useRouter()
+  const [userName, setUserName] = useState("User")
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user")
+    if (storedUser) {
+      setUserName(storedUser)
+    }
+  }, [])
 
   const handleLogout = () => {
-    localStorage.removeItem("token") // if you store token
+    localStorage.removeItem("token")
     router.push("/login")
   }
-
-  const userName = localStorage.getItem("user") || "User"
 
   return (
     <div style={{ height: "100vh", width: "100%", position: "relative" }}>
@@ -37,6 +45,7 @@ export default function MapPage() {
         }}
       >
         <span>👤 {userName}</span>
+
         <button
           onClick={handleLogout}
           style={{
@@ -50,9 +59,11 @@ export default function MapPage() {
         >
           Logout
         </button>
+
       </div>
 
       <DamMap />
+
     </div>
   )
 }

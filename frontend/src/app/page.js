@@ -1,52 +1,83 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+"use client"
 
-export default function LandingPage() {
+import { useRouter } from "next/navigation"
+
+export default function Home() {
+  const router = useRouter()
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950 via-black to-gray-900 text-white">
+    <div className="bg-black text-white min-h-screen">
 
-      {/* Navbar */}
-      <nav className="flex justify-between items-center px-10 py-6 backdrop-blur-lg bg-white/5 border-b border-white/10">
-        <h1 className="text-2xl font-bold tracking-wide">HydroSync AI</h1>
-
-        <div className="space-x-4">
-          <Link href="/login">
-            <Button variant="outline">Login</Button>
-          </Link>
-          <Link href="/register">
-            <Button>Register</Button>
-          </Link>
+      {/* NAVBAR */}
+      <nav className="flex justify-between items-center px-12 py-6 border-b border-gray-800">
+        <h1 className="text-2xl font-bold text-cyan-400">HydroSync AI</h1>
+        <div className="flex gap-6">
+          <button onClick={()=>router.push("/login")} className="hover:text-cyan-400">Login</button>
+          <button onClick={()=>router.push("/register")} className="bg-cyan-500 px-4 py-2 rounded-lg hover:bg-cyan-400">Register</button>
         </div>
       </nav>
 
-      {/* Hero */}
-      <section className="flex flex-col items-center justify-center text-center h-[85vh] px-6">
-        <h2 className="text-5xl font-bold mb-6 animate-in fade-in">
-          AI Powered Dam Monitoring & Flood Prediction
-        </h2>
+      {/* HERO */}
+      <section className="grid md:grid-cols-2 gap-12 px-12 py-20 items-center">
+        <div>
+          <h1 className="text-6xl font-bold leading-tight">
+            AI Dam Monitoring <span className="text-cyan-400"> & Flood Prediction</span>
+          </h1>
+          <p className="text-gray-400 mt-6 text-lg">
+            HydroSync predicts floods using artificial intelligence, real-time dam monitoring and village risk analysis.
+          </p>
+          <button
+            onClick={()=>router.push("/register")}
+            className="mt-8 bg-cyan-500 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400"
+          >
+            Live Dam Monitoring
+          </button>
+        </div>
 
-        <p className="text-gray-300 max-w-2xl text-lg">
-          Real-time analytics, inflow-outflow monitoring, rainfall tracking and AI risk prediction for water infrastructure.
-        </p>
-
-        
+        {/* Use the generated AI image */}
+        <div className="rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+          <img src="/images/hydro_ai.png" alt="Hydro AI illustration" className="w-full"/>
+        </div>
       </section>
 
-      {/* Features */}
-      <section className="grid md:grid-cols-3 gap-8 px-12 pb-20">
-        <Feature title="Live Monitoring" desc="Track water levels, inflow & rainfall in real time." />
-        <Feature title="AI Risk Engine" desc="Predict flood probability using ML models." />
-        <Feature title="Interactive Dam Map" desc="Locate dams and monitor surrounding villages." />
+      {/* FEATURES */}
+      <section className="bg-gray-950 py-24 px-12">
+        <h2 className="text-4xl font-bold text-center mb-16">HydroSync Features</h2>
+        <div className="grid md:grid-cols-3 gap-12">
+          <div className="bg-black p-8 rounded-xl border border-gray-800">
+            <h3 className="text-xl text-cyan-400 font-bold mb-3">Real Time Dam Monitoring</h3>
+            <p className="text-gray-400 mt-2">Monitor water level, reservoir capacity and nearby villages on an interactive map.</p>
+          </div>
+          <div className="bg-black p-8 rounded-xl border border-gray-800">
+            <h3 className="text-xl text-cyan-400 font-bold mb-3">AI Flood Prediction</h3>
+            <p className="text-gray-400 mt-2">Predict floods using rainfall data, reservoir capacity and water flow analysis.</p>
+          </div>
+          <div className="bg-black p-8 rounded-xl border border-gray-800">
+            <h3 className="text-xl text-cyan-400 font-bold mb-3">Village Alert System</h3>
+            <p className="text-gray-400 mt-2">Nearby villages receive alerts before flood water reaches critical levels.</p>
+          </div>
+        </div>
       </section>
-    </div>
-  )
-}
 
-function Feature({ title, desc }) {
-  return (
-    <div className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:scale-105 transition">
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-400">{desc}</p>
+      {/* HOW HYDROSYNC WORKS */}
+      <section className="px-12 py-24">
+        <h2 className="text-4xl font-bold text-center mb-16">How HydroSync Works</h2>
+        <div className="grid md:grid-cols-4 gap-12 text-center">
+          {["Data Collection", "AI Processing", "Flood Prediction", "Village Alerts"].map((step,index)=>(
+            <div key={index} className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+              <img src="/images/hydro_ai.png" className="w-20 mx-auto mb-4" />
+              <h3 className="text-cyan-400 font-bold">{step}</h3>
+              <p className="text-gray-400 text-sm mt-2">Illustration of {step.toLowerCase()} process.</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-gray-800 text-center py-10 text-gray-500">
+        HydroSync AI Monitoring System © 2026
+      </footer>
+
     </div>
   )
 }
