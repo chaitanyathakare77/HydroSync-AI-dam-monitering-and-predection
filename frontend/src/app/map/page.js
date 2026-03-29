@@ -3,21 +3,36 @@
 import dynamic from "next/dynamic"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
+import Sidebar from "../components/Sidebar"
 
 const DamMap = dynamic(() => import("./DamMap"), {
   ssr: false,
 })
 
 export default function MapPage() {
-
+  const [user, setUser] = useState(null)
+  const [activeKey, setActiveKey] = useState("map")
   const router = useRouter()
-  const [userName, setUserName] = useState("User")
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user")
-    if (storedUser) {
-      setUserName(storedUser)
+    const token = localStorage.getItem("token")
+    if (!token) {
+      router.push("/login")
+      return
     }
+
+    fetch("http://localhost:5000/api/auth/profile", {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message) {
+          localStorage.removeItem("token")
+          router.push("/login")
+        } else {
+          setUser(data)
+        }
+      })
   }, [])
 
   const handleLogout = () => {
@@ -25,45 +40,29 @@ export default function MapPage() {
     router.push("/login")
   }
 
-  return (
-    <div style={{ height: "100vh", width: "100%", position: "relative" }}>
-      
-      {/* Profile + Logout */}
-      <div
-        style={{
-          position: "absolute",
-          top: "15px",
-          right: "20px",
-          zIndex: 1000,
-          background: "white",
-          padding: "8px 15px",
-          borderRadius: "8px",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-          display: "flex",
-          gap: "15px",
-          alignItems: "center"
-        }}
-      >
-        <span>👤 {userName}</span>
+  const handleNavClick = (item) => {
+    setActiveKey(item.key)
+    if (item.key !== "map") {
+      router.push(item.href)
+    }
+  }
 
-        <button
-          onClick={handleLogout}
-          style={{
-            background: "red",
-            color: "white",
-            border: "none",
-            padding: "5px 10px",
-            borderRadius: "5px",
-            cursor: "pointer"
-          }}
-        >
-          Logout
-        </button>
-
+  if (!user)
+    return (
+      <div className="flex h-screen w-full items-center justify-center bg-linear-to-br from-blue-50 to-purple-50 text-blue-600">
+        <div className="flex flex-col items-center gap-3">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-600 border-t-transparent" />
+          <span className="text-sm tracking-widest uppercase opacity-70">Loading Map…</span>
+        </div>
       </div>
+    )
 
-      <DamMap />
-
+  return (
+    <div className="flex h-screen w-full overflow-hidden bg-linear-to-br from-gray-50 to-blue-50 font-sans text-gray-900">
+      <Sidebar activeKey={activeKey} onNavClick={handleNavClick} user={user} onLogout={handleLogout} />
+      <main className="relative flex-1 overflow-hidden">
+        <DamMap />
+      </main>
     </div>
   )
 }
