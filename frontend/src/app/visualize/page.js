@@ -1,7 +1,9 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import Papa from 'papaparse';
+import Sidebar from '../components/Sidebar';
 import {
     ComposedChart,
     Area,
@@ -191,6 +193,43 @@ function xTickFormatter(ts) {
 
 // ── Main ───────────────────────────────────────────────────────────────────────
 export default function JayakwadiDashboard() {
+    const [user, setUser] = React.useState(null);
+    const [activeKey, setActiveKey] = React.useState("visualize");
+    const router = useRouter();
+
+    React.useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            router.push("/login");
+            return;
+        }
+
+        fetch("http://localhost:5000/api/auth/profile", {
+            headers: { Authorization: `Bearer ${token}` },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.message) {
+                    localStorage.removeItem("token");
+                    router.push("/login");
+                } else {
+                    setUser(data);
+                }
+            });
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        router.push("/login");
+    };
+
+    const handleNavClick = (item) => {
+        setActiveKey(item.key);
+        if (item.key !== "visualize") {
+            router.push(item.href);
+        }
+    };
+
     const [rawData, setRawData] = React.useState([]);
     const [yFrom, setYFrom] = React.useState(2016);
     const [yTo, setYTo] = React.useState(2025);
@@ -265,8 +304,21 @@ export default function JayakwadiDashboard() {
         tickCount: 8,
     };
 
+    if (!user)
+        return (
+            <div className="flex h-screen w-full items-center justify-center bg-linear-to-br from-blue-50 to-purple-50 text-blue-600">
+                <div className="flex flex-col items-center gap-3">
+                    <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-600 border-t-transparent" />
+                    <span className="text-sm tracking-widest uppercase opacity-70">Loading Visualize…</span>
+                </div>
+            </div>
+        );
+
     return (
-        <div style={{ background: '#f5f7fa', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+        <div className="flex h-screen w-full overflow-hidden bg-linear-to-br from-gray-50 to-blue-50 font-sans text-gray-900">
+            <Sidebar activeKey={activeKey} onNavClick={handleNavClick} user={user} onLogout={handleLogout} />
+            <main className="relative flex-1 overflow-auto">
+                <div style={{ background: '#f5f7fa', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
 
             {/* Header */}
             <div style={{
@@ -513,5 +565,7 @@ export default function JayakwadiDashboard() {
                 </div>
             )}
         </div>
-    );
+    </main>
+</div>
+);
 }
