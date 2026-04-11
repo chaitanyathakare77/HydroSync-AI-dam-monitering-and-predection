@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayakwadi Dam - 2026 Overflow Forecast</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- PapaParse for parsing the CSV file easily -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <div class="container fade-in">
+        <header>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12h4l3-9 5 18 3-9h5"/>
+                </svg>
+            </div>
+            <h1>Jayakwadi Dam <span>2026 Overflow Forecast</span></h1>
+        </header>
+
+        <section class="summary-cards">
+            <div class="glass-card">
+                <h3>Total Predicted Risk Days</h3>
+                <h2 id="total-days">--</h2>
+                <p>Days predicted to exceed 463.90m threshold</p>
+            </div>
+            <div class="glass-card">
+                <h3>High Risk Months</h3>
+                <h2 id="high-risk-months">--</h2>
+                <p>Months triggering alerts</p>
+            </div>
+            <div class="glass-card status-card safe">
+                <h3>Status</h3>
+                <h2 id="overall-status">Loading...</h2>
+                <p>Based on ML Predictions</p>
+            </div>
+        </section>
+
+        <!-- Dynamic grid for the Month Ranges -->
+        <h2 class="section-title">Critical Date Ranges</h2>
+        <section class="month-grid" id="month-grid">
+            <!-- Cards will be populated by app.js -->
+        </section>
+
+        <!-- Interactive Chart -->
+        <h2 class="section-title">Annual Risk Probability Curve</h2>
+        <section class="chart-container glass-card">
+            <canvas id="probabilityChart"></canvas>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

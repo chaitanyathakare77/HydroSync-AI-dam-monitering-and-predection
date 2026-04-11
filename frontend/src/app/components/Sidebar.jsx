@@ -63,6 +63,16 @@ const NAV_ITEMS = [
     ),
   },
   {
+    key: "predictions",
+    label: "Prediction",
+    href: "/predictions",
+    icon: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
     key: "3d visualization",
     label: "3D Visualization",
     href: "/3d-visualization",

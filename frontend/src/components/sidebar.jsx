@@ -12,6 +12,7 @@ export default function Sidebar({ user, activeKey, setActiveKey }) {
         { key: "statistics", label: "Dam Statistics", href: "/statistics" },
         { key: "alerts", label: "Alerts & Warnings", href: "/alerts", badge: 3 },
         { key: "reports", label: "Reports", href: "/reports" },
+        { key: "predictions", label: "Prediction", href: "/predictions" },
         { key: "3d visualization", label: "3D Visualization", href: "/3d-visualization" },
     ]
 
