@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import cors from "cors"
 import authRoutes from "./routes/authRoutes.js"
+import alertRoutes from "./routes/alertRoutes.js"
 
 dotenv.config()
 
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.log(err))
 
 app.use("/api/auth", authRoutes)
+app.use("/api/alerts", alertRoutes)
 
 app.listen(5000, () => {
   console.log("Server running on port 5000")
