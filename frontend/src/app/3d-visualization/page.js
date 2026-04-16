@@ -106,6 +106,44 @@ export default function ThreeDVisualizationPage() {
           setAlertMessage("⚠️ CRITICAL: Water level critical! Emergency gates opened!")
           setSystemStatus("EMERGENCY")
           sceneRef.current?.setGateOpen(1.0)
+         
+           // Send WhatsApp alerts to registered villagers
+           const sendWhatsAppAlerts = async () => {
+             try {
+               const registrations = localStorage.getItem("villager_registrations")
+               const villagers = registrations ? JSON.parse(registrations) : []
+             
+               if (villagers.length === 0) {
+                 console.log("No registered villagers to alert")
+                 return
+               }
+             
+               const phoneNumbers = villagers.map(v => v.mobile)
+               const token = localStorage.getItem("token")
+             
+               const alertText = `🚨 JAYAKWADI DAM EMERGENCY ALERT 🚨\n\nWater level has reached CRITICAL (90%)!\n\nEmergency gates have been OPENED!\n\n⚠️ URGENT: Evacuate to safer areas immediately!\n\n- HydroSync AI Monitoring System`
+             
+               const response = await fetch("http://localhost:5000/api/alerts/send-dam-alert", {
+                 method: "POST",
+                 headers: {
+                   "Content-Type": "application/json",
+                   Authorization: `Bearer ${token}`
+                 },
+                 body: JSON.stringify({
+                   phoneNumbers,
+                   alertMessage: alertText,
+                   waterLevel: 90
+                 })
+               })
+             
+               const data = await response.json()
+               console.log("WhatsApp alerts sent:", data)
+             } catch (error) {
+               console.error("Error sending alerts:", error)
+             }
+           }
+         
+           sendWhatsAppAlerts()
         }
 
         /* Drain during auto-release */
