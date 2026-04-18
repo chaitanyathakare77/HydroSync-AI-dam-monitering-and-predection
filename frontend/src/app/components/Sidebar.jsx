@@ -55,28 +55,7 @@ const NAV_ITEMS = [
   },
 ]
 
-const BOTTOM_ITEMS = [
-  {
-    key: "settings",
-    label: "Settings",
-    href: "/settings",
-    icon: (
-      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-        <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><circle cx="12" cy="12" r="3" />
-      </svg>
-    ),
-  },
-  {
-    key: "profile",
-    label: "Profile",
-    href: "/profile",
-    icon: (
-      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-        <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
-    ),
-  },
-]
+
 
 export default function Sidebar({ activeKey, onNavClick, user, onLogout }) {
   return (
@@ -133,27 +112,7 @@ export default function Sidebar({ activeKey, onNavClick, user, onLogout }) {
 
       {/* Bottom Section */}
       <div className="border-t border-gray-200 px-3 py-3">
-        {BOTTOM_ITEMS.map((item) => {
-          const isActive = activeKey === item.key
-          return (
-            <button
-              key={item.key}
-              onClick={() => onNavClick(item)}
-              className={`group relative flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all duration-200 ${isActive
-                ? "bg-linear-to-r from-blue-100 to-cyan-50 text-blue-700"
-                : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                }`}
-            >
-              {isActive && (
-                <span className="absolute left-0 top-1/2 h-5 w-0.5 -translate-y-1/2 rounded-full bg-blue-500" />
-              )}
-              <span className={isActive ? "text-blue-500" : "text-gray-400 group-hover:text-gray-600"}>
-                {item.icon}
-              </span>
-              <span className="flex-1 font-medium">{item.label}</span>
-            </button>
-          )
-        })}
+
 
         {/* User Card */}
         <div className="mt-3 flex items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 px-3 py-2.5">
